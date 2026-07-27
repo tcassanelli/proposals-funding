@@ -150,7 +150,6 @@ Ultrafast astronomy is undergoing a revolution. Over the past 15 years, thousand
 \subsection{Description}
 \subsubsection{Overall aim}
 % max 1 page
-
 The Italian quantum eye (IQUEYE) \cite{2009A&A...508..531N,2024CoSka..54b..29Z} is a high-time-resolution optical instrument designed to record the arrival time of individual photons ($\Delta\lambda = \qtyrange{420}{720}{\nano\m}$). Its four single-photon avalanche diodes (SPADs) convert each detected photon into an electronic pulse, while a custom timing system referenced to a GPS-disciplined rubidium clock assigns photon arrival times with $\delta{t}\approx\qty{0.5}{\nano\s}$ accuracy. Unlike conventional optical instruments, which integrate the incident light over comparatively long exposures, IQUEYE preserves the temporal information required to study pulsars (and its individual pulse emission) and search for rapid or transient optical emission.
 
 IQUEYE is currently located in Cerro Pachón, Coquimbo Region, stored in the Gemini South facility. No additional instrument transportation is required to begin operations.
@@ -182,6 +181,12 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
   \end{tikzpicture}
 
   \caption{\textit{Left}: IQUEYE optical head at Gemini South. The optical head is composed of a selectable pinhole, two filter wheels (including polarizers), demagnification optical components, and a pyramid to split light into the four SPADs. SPADs are located at the back of the optical head and they are directly connected to a power source and a data transfer cable. These connections run towards the electronics rack. \textit{Right}: IQUEYE's electronics rack. Photograph shows the rack with no cable connections. The rack hosts the power distribution unit, timing modules, data acquisition, and Rb clock and GPS modules. All equipment is hosted and then remotely accessed through a single computer and within Gemini South's control room. Both photographs show instrument being commission on site, February 2025. Adapted from \cite{2025SPIE13624E..1RC}.}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{crab}
+  \caption{Very first optical pulses fully resolved by IQUEYE at Gemini South \cite{2025SPIE13624E..1RC}. Similar results will be expanded to other sources and case studies. Notice that this is a single pulse phase and it has not been folded over time. This is the unprecedented time resolution and improved signal-to-noise ratio that our team can achieve.}
 \end{figure}
 
 \subsubsection{Specific objectives}
@@ -261,10 +266,8 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
     group label font=\small\bfseries,
     bar label font=\small,
     milestone label font=\small,
-    group/.append style={fill=blue!30},
-    bar/.append style={fill=blue!60},
     milestone/.append style={fill=magenta!70},
-    link/.append style={->, thick, blue!70!black},
+    link/.append style={->, thick},
     group height=0.3,
     bar height=0.5,
     ]{1}{8}
@@ -278,17 +281,23 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
     \gantttitle{Q6}{1}
     \gantttitle{Q7}{1}
     \gantttitle{Q8}{1} \\
-  
+
+    % O1: blue
+    \ganttset{group/.append style={fill=blue!30}, bar/.append style={fill=blue!60}}
     \ganttgroup[name=g1]{O1: Establish the capability}{1}{2} \\
     \ganttbar[name=o1a]{O1a: Instrument preparation and installation}{1}{1} \\
     \ganttbar[name=o1b]{O1b: Recommissioning and validation}{2}{2} \\
 
+    % O2: teal
+    \ganttset{group/.append style={fill=teal!30}, bar/.append style={fill=teal!60}}
     \ganttgroup[name=g2]{O2: Enable sustained access}{1}{8} \\
     \ganttbar[name=o2a]{O2a: Operational and reduction procedures}{1}{2} \\
     \ganttbar[name=o2b]{O2b: Gemini South and community support}{3}{8} \\
     \ganttbar[name=o2c]{O2a: Procedure review and refinement}{3}{8} \\
     \ganttmilestone[name=o2d]{O2b: Return IQUEYE to Asiago}{8} \\
 
+    % O3: orange
+    \ganttset{group/.append style={fill=orange!30}, bar/.append style={fill=orange!60}}
     \ganttgroup[name=g3]{O3: Deliver scientific results}{1}{8} \\
     \ganttbar[name=o3a1]{O3a: Proposal preparation and submission}{1}{1}
     \ganttbar[name=o3a2]{}{3}{3}
@@ -300,12 +309,12 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
     \ganttmilestone[name=o3pub2]{}{8} \\
     \ganttbar[name=o3d]{O3c: Multiwavelength coordination}{1}{8}
 
-    \ganttlink{o1a}{o1b}
-    \ganttlink{o1b}{o2b}
-    \ganttlink{o2a}{o2b}
-    \ganttlink{o2a}{o2c}
-    \ganttlink{o1b}{o3b}
-    \ganttlink{o3a1}{o3b}
+    \ganttlink[link/.append style={blue!70!black}]{o1a}{o1b}
+    \ganttlink[link/.append style={blue!70!black}]{o1b}{o2b}
+    \ganttlink[link/.append style={teal!70!black}]{o2a}{o2b}
+    \ganttlink[link/.append style={teal!70!black}]{o2a}{o2c}
+    \ganttlink[link/.append style={blue!70!black}]{o1b}{o3b}
+    \ganttlink[link/.append style={orange!70!black}]{o3a1}{o3b}
   \end{ganttchart}
 \end{figure}
 
