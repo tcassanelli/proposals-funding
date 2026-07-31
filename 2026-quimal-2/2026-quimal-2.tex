@@ -148,14 +148,20 @@ Ultrafast astronomy is undergoing a revolution. Over the past 15 years, thousand
 \subsection{Description}
 \subsubsection{Overall aim}
 % max 1 page
-The Italian quantum eye (IQUEYE) \cite{2009A&A...508..531N,2024CoSka..54b..29Z} is a high-time-resolution optical instrument designed to record the arrival time of individual photons ($\Delta\lambda = \qtyrange{420}{720}{\nano\m}$). Its four single-photon avalanche diodes (SPADs) convert each detected photon into an electronic pulse, while a custom timing system referenced to a GPS-disciplined rubidium clock assigns photon arrival times with $\delta{t}\approx\qty{0.5}{\nano\s}$ accuracy. Unlike conventional optical instruments, which integrate the incident light over comparatively long exposures, IQUEYE preserves the temporal information required to study pulsars (and its individual pulse emission) and search for rapid or transient optical emission.
+The Italian quantum eye (IQUEYE) \cite{2009A&A...508..531N,2024CoSka..54b..29Z} is a high-time-resolution optical instrument designed to record the arrival time of individual photons ($\Delta\lambda = \qtyrange{420}{720}{\nano\m}$). Its four single-photon avalanche diodes (SPADs) convert each detected photon into an electronic pulse, while a custom timing system referenced to a GPS-disciplined rubidium clock assigns photon arrival times with $\delta{t}\approx\qty{0.5}{\nano\s}$ accuracy (see fig.\ \ref{fig:instrument}). Unlike conventional optical instruments, which integrate the incident light over comparatively long exposures, IQUEYE preserves the temporal information required to study pulsars (and its individual pulse emission) and search for rapid or transient optical emission (see fig.\ \ref{fig:crab}).
 
 Coupling IQUEYE to the $D = \qty{8}{\m}$ Gemini South telescope is essential because high-time-resolution observations are intrinsically photon limited: the telescope's large collecting area increases the number of photons detected within each short time interval (since the photon counts fractional error scales as $\delta{n_\text{p}}/n_\text{p}\propto{D^{-1}}$), allowing us to probe fainter sources and shorter variability timescales. Gemini South also provides access to a rich southern sky and an established international user community. IQUEYE's successful first campaign at Gemini South in February 2025 \cite{2025SPIE13624E..1RC} demonstrated the feasibility of this instrumental combination and substantially reduces the technical risk of establishing longer-term operations.
 
 The project will establish IQUEYE as a resident visitor instrument at Gemini South (and the first lead by a Chilean team) for two years, from 2027A through 2028B (similarly as previous instruments such as IGRINS \cite{10.1117/12.2312345}). During 2027, we will recommission the instrument, validate its timing and observing performance, establish operational and data-reduction procedures, and support its first community programs. In parallel, we will submit proposals for our pulsar and transient science program and coordinate complementary observations at other wavelengths. During 2028, we will consolidate routine operations, continue supporting approved community programs, and carry out successive science campaigns informed by the results of the previous semesters. Our team, led by Prof.\ Cassanelli (responsible researcher), will coordinate installation, observing, calibration, and data reduction throughout the project.
 
-
 IQUEYE is currently located in Cerro Pachón, Coquimbo Region, stored in the Gemini South facility. No additional instrument transportation is required to begin operations.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{crab}
+  \caption{Very first optical pulses from the Crab pulsar (PSR J0534$+$2200) fully resolved and observed with IQUEYE at Gemini South \cite{2025SPIE13624E..1RC}. Similar results will be expanded to other sources and case studies. Notice that this is a single pulse phase and it has not been folded over time. This is the unprecedented time resolution and improved signal-to-noise ratio that our team can achieve.}
+  \label{fig:crab}
+\end{figure}
 
 \begin{figure}[t]
   \centering
@@ -180,12 +186,7 @@ IQUEYE is currently located in Cerro Pachón, Coquimbo Region, stored in the Gem
   \end{tikzpicture}
 
   \caption{\textit{Left}: IQUEYE optical head at Gemini South. The optical head is composed of a selectable pinhole, two filter wheels (including polarizers), demagnification optical components, and a pyramid to split light into the four SPADs. SPADs are located at the back of the optical head and they are directly connected to a power source and a data transfer cable. These connections run towards the electronics rack. \textit{Right}: IQUEYE's electronics rack. Photograph shows the rack with no cable connections. The rack hosts the power distribution unit, timing modules, data acquisition, and Rb clock and GPS modules. All equipment is hosted and then remotely accessed through a single computer and within Gemini South's control room. Both photographs show instrument being commission on site, February 2025. Adapted from \cite{2025SPIE13624E..1RC}.}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \includegraphics{crab}
-  \caption{Very first optical pulses from the Crab pulsar (PSR J0534$+$2200) fully resolved and observed with IQUEYE at Gemini South \cite{2025SPIE13624E..1RC}. Similar results will be expanded to other sources and case studies. Notice that this is a single pulse phase and it has not been folded over time. This is the unprecedented time resolution and improved signal-to-noise ratio that our team can achieve.}
+  \label{fig:instrument}
 \end{figure}
 
 \subsubsection{Specific objectives}
@@ -210,7 +211,6 @@ IQUEYE is currently located in Cerro Pachón, Coquimbo Region, stored in the Gem
     \item Coordinate simultaneous or contemporaneous multiwavelength observations that complement IQUEYE observations and strengthen their scientific return.
   \end{enumerate}
 \end{enumerate}
-
 
 \subsubsection{Work plan}
 % max 1 page
