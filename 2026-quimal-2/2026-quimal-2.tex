@@ -127,9 +127,7 @@
 \usepackage{cleveref}
   
 % to convert to plain text use:
-% pandoc -t plain --bibliography=refs.bib --citeproc --csl ieee.csl --wrap=none kavli_2025.tex -o kavli_2025.txt 
-
-% latexmk -pdflua -pvc -synctex=1 -interaction=nonstopmode 2026_alma.tex
+% pandoc -t plain --bibliography=refs.bib --citeproc --csl ieee.csl --wrap=none 2026-quimal-2.tex 2026-quimal-2.txt 
 
 \begin{document}
 
@@ -145,18 +143,19 @@
 \subsection{Summary}
 % 200 words maximum
 
-Ultrafast astronomy is undergoing a revolution. Over the past 15 years, thousands of extremely energetic, millisecond-duration radio flashes have been detected at centimetre and millimetre wavelengths \cite{2022A&ARv..30....2P,2026ApJS..283...34C,2024NatAs...8.1429C}. Their physical origins remain under debate, although many are thought to arise from highly dense, strongly magnetized neutron stars. These Galactic and extragalactic phenomena include fast radio bursts (FRBs) \cite{2026arXiv260627546C}, rotating radio transients, pulsar giant pulses, and nanoshots. To date, their rapid variability has been studied primarily at radio and X-ray wavelengths, leaving the optical regime largely unexplored. We propose to search for and characterize fast optical emission by coupling the Italian quantum eye (IQUEYE) with the 8-m Gemini South telescope. IQUEYE is a high-time-resolution optical photon counter capable of time-tagging individual photons with nanosecond precision. Following its successful commissioning by our team at Gemini South in early 2025, we will establish IQUEYE as a visitor instrument for the 2027A semester. This project will enable new optical transient science and make this unique capability available to the Chilean and international astronomical communities.
+Ultrafast astronomy is undergoing a revolution. Over the past 15 years, thousands of extremely energetic, millisecond-duration radio flashes have been detected at centimetre and millimetre wavelengths \cite{2022A&ARv..30....2P,2026ApJS..283...34C,2024NatAs...8.1429C}. Their physical origins remain under debate, although many are thought to arise from highly dense, strongly magnetized neutron stars. These Galactic and extragalactic phenomena include fast radio bursts (FRBs) \cite{2026arXiv260627546C}, rotating radio transients \cite{2026MNRAS.549ag787A}, pulsar giant pulses \cite{2024ApJ...973...87D}, and nanoshots \cite{2003Natur.422..141H}. To date, their rapid variability has been studied primarily at radio and X-ray wavelengths, leaving the optical regime largely unexplored. We propose to search for and characterize fast optical emission by coupling the Italian quantum eye (IQUEYE) with the 8-m Gemini South telescope. IQUEYE is a high-time-resolution optical photon counter capable of time-tagging individual photons with nanosecond precision. Following its successful commissioning by our team at Gemini South in early 2025, we will establish IQUEYE as a visitor instrument for the 2027A semester. This project will enable new optical transient science and make this unique capability available to the Chilean and international astronomical communities.
   
 \subsection{Description}
 \subsubsection{Overall aim}
 % max 1 page
 The Italian quantum eye (IQUEYE) \cite{2009A&A...508..531N,2024CoSka..54b..29Z} is a high-time-resolution optical instrument designed to record the arrival time of individual photons ($\Delta\lambda = \qtyrange{420}{720}{\nano\m}$). Its four single-photon avalanche diodes (SPADs) convert each detected photon into an electronic pulse, while a custom timing system referenced to a GPS-disciplined rubidium clock assigns photon arrival times with $\delta{t}\approx\qty{0.5}{\nano\s}$ accuracy. Unlike conventional optical instruments, which integrate the incident light over comparatively long exposures, IQUEYE preserves the temporal information required to study pulsars (and its individual pulse emission) and search for rapid or transient optical emission.
 
+Coupling IQUEYE to the $D = \qty{8}{\m}$ Gemini South telescope is essential because high-time-resolution observations are intrinsically photon limited: the telescope's large collecting area increases the number of photons detected within each short time interval (since the photon counts fractional error scales as $\delta{n_\text{p}}/n_\text{p}\propto{D^{-1}}$), allowing us to probe fainter sources and shorter variability timescales. Gemini South also provides access to a rich southern sky and an established international user community. IQUEYE's successful first campaign at Gemini South in February 2025 \cite{2025SPIE13624E..1RC} demonstrated the feasibility of this instrumental combination and substantially reduces the technical risk of establishing longer-term operations.
+
+The project will establish IQUEYE as a resident visitor instrument at Gemini South (and the first lead by a Chilean team) for two years, from 2027A through 2028B (similarly as previous instruments such as IGRINS \cite{10.1117/12.2312345}). During 2027, we will recommission the instrument, validate its timing and observing performance, establish operational and data-reduction procedures, and support its first community programs. In parallel, we will submit proposals for our pulsar and transient science program and coordinate complementary observations at other wavelengths. During 2028, we will consolidate routine operations, continue supporting approved community programs, and carry out successive science campaigns informed by the results of the previous semesters. Our team, led by Prof.\ Cassanelli (responsible researcher), will coordinate installation, observing, calibration, and data reduction throughout the project.
+
+
 IQUEYE is currently located in Cerro Pachón, Coquimbo Region, stored in the Gemini South facility. No additional instrument transportation is required to begin operations.
-
-Coupling IQUEYE to the 8-m Gemini South telescope is essential because high-time-resolution observations are intrinsically photon limited: the telescope's large collecting area increases the number of photons detected within each short time interval (since the photon counts fractional error scales as $\delta{n_\text{p}}/n_\text{p}\propto{D^{-1}}$), allowing us to probe fainter sources and shorter variability timescales. Gemini South also provides access to a rich southern sky and an established international user community. IQUEYE's successful first campaign at Gemini South in February 2025 \cite{2025SPIE13624E..1RC} demonstrated the feasibility of this instrumental combination and substantially reduces the technical risk of establishing longer-term operations.
-
-The project will establish IQUEYE as a resident visitor instrument at Gemini South for two years, from 2027A through 2028B. During 2027, we will recommission the instrument, validate its timing and observing performance, establish operational and data-reduction procedures, and support its first community programs. In parallel, we will submit proposals for our pulsar and transient science program and coordinate complementary observations at other wavelengths. During 2028, we will consolidate routine operations, continue supporting approved community programs, and carry out successive science campaigns informed by the results of the previous semesters. Our team, led by Prof.\ Cassanelli, will coordinate installation, observing, calibration, and data reduction throughout the project.
 
 \begin{figure}[t]
   \centering
@@ -186,7 +185,7 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
 \begin{figure}[t]
   \centering
   \includegraphics{crab}
-  \caption{Very first optical pulses fully resolved by IQUEYE at Gemini South \cite{2025SPIE13624E..1RC}. Similar results will be expanded to other sources and case studies. Notice that this is a single pulse phase and it has not been folded over time. This is the unprecedented time resolution and improved signal-to-noise ratio that our team can achieve.}
+  \caption{Very first optical pulses from the Crab pulsar (PSR J0534$+$2200) fully resolved and observed with IQUEYE at Gemini South \cite{2025SPIE13624E..1RC}. Similar results will be expanded to other sources and case studies. Notice that this is a single pulse phase and it has not been folded over time. This is the unprecedented time resolution and improved signal-to-noise ratio that our team can achieve.}
 \end{figure}
 
 \subsubsection{Specific objectives}
@@ -216,7 +215,9 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
 \subsubsection{Work plan}
 % max 1 page
 
-\textbf{Q1---instrument preparation.} The project will begin by establishing the instrumental capability described in O1. Our team will install IQUEYE at an available instrument support structure (ISS) port, reposition its GPS antenna, repair its auxiliary SPAD sky camera, and install a service and control computer in the Gemini South control room. This computer will enable remote monitoring and operation during observations. In parallel, we will prepare the initial observing, calibration, and data-reduction procedures (O2a), submit the first cycle of science proposals (O3a), and begin coordinating complementary radio and X-ray observations (O3c). Potential partners include the Instituto Argentino de Radioastronomía 30-m telescope, the Algonquin Radio Observatory 46-m telescope, and collaborators working with NICER.
+Note that the 2027A observing proposal (O3a) will be submitted in September 2026, prior to the project start; this pre-project submission is not shown in the work plan below, which covers the funded period only. The first in-project proposal cycle (Q1) targets semester 2027B.
+
+\textbf{Q1---instrument preparation.} The project will begin by establishing the instrumental capability described in O1a. Our team will install IQUEYE at an available instrument support structure (ISS) port, reposition its GPS antenna, repair its auxiliary SPAD sky camera, and install a service and control computer in the Gemini South control room. This computer will enable remote monitoring and operation during observations. In parallel, we will prepare the initial observing, calibration, and data-reduction procedures (O2a), submit the first cycle of science proposals (O3a), and begin coordinating complementary radio and X-ray observations (O3c). Potential partners include the Instituto Argentino de Radioastronomía 30-m telescope, the Algonquin Radio Observatory 46-m telescope, and collaborators working with NICER.
 
 \textbf{Q2---recommissioning and validation.} We will perform technical and scientific recommissioning using twilight and on-sky calibration observations. These tests will verify the timing accuracy, sensitivity, calibration, data acquisition, and remote-control functions of IQUEYE (O1b). The resulting measurements will also be used to finalize the operational and data-reduction procedures. Completion of this phase will enable routine community support and science observations from Q3 onward.
 
@@ -229,7 +230,7 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
   \centering                                                                            \begin{tikzpicture}
   \def\d{6.5}
   \pgfmathsetmacro\relativeoffset{\d * .15}
-  \coordinate (O1) at (0, 0);                                                                                                                                                                                                                 
+  \coordinate (O1) at (0, 0);
   \coordinate (O2) at ($(O1) + (\d * 1.2, 0)$);
   % Left image: ISS, flange, electronics rack, BWA         
   \node[draw=black, fill=white] (F1) at (O1) {\includegraphics[height=\d cm]{iss-bw-IQUEYE.jpeg}};
@@ -249,7 +250,7 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
   \draw[thick, -latex] (F1) ++ (0, {-\d * .3}) -- ++ (-{\d*.25}, 0) node[blocklabel, left] {IQUEYE \\ electronics rack};
   \draw[thick, -latex] (F1) ++ ({\d * .16}, {-\d * .4}) -- ++ ({\d*.18}, {0}) node[blocklabel, right] {BWA};
 \end{tikzpicture}
-  \caption{IQUEYE at Gemini South. From top to bottom (left-hand side): ISS, flange, and electronics rack. The white mechanical structure is the ballast weight assembly (BWA), a structure to give balance to the telescope and attach any remaining instrument load (such as the electronics). The total weight of the system BWA, flange, IQUEYE optical head and electronics is \qty{2005.5}{\kg} and the entire system has a precisely tunned center of mass near the center of the BWA. Posterior the install of the whole structure a mechanical balance must be done to the entire telescope.                                                                                                                                             The optical head is independently attached to the ISS from the BWA, thus, mechanical stress and perturbations to optical light path come only from the flange and optical head contributions. In the {\textbf{zoom-in}} section (right-hand side) the top section of the optical head and flange are shown attached to the ISS. Photograph taken on February 2025.}
+  \caption{IQUEYE at Gemini South. From top to bottom (left-hand side): intrsument support structure (ISS), flange, and electronics rack. The white mechanical structure is the ballast weight assembly (BWA), a structure to give balance to the telescope and attach any remaining instrument load (such as the electronics). The total weight of the system BWA, flange, IQUEYE optical head and electronics is \qty{2005.5}{\kg} and the entire system has a precisely tunned center of mass near the center of the BWA. Posterior the install of the whole structure a mechanical balance must be done to the entire telescope. The optical head is independently attached to the ISS from the BWA, thus, mechanical stress and perturbations to optical light path come only from the flange and optical head contributions. In the {\textbf{zoom-in}} section (right-hand side) the top section of the optical head and flange are shown attached to the ISS. Photograph taken on February 2025.}
   \label{fig:iqueyeatgemini}
 \end{figure*}
 
@@ -258,7 +259,7 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
   \begin{ganttchart}[
     hgrid,
     vgrid,
-    x unit = 1cm,
+    x unit = 0.5cm,
     y unit chart=0.5cm,
     y unit title=0.6cm,
     title height=1,
@@ -270,55 +271,53 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
     link/.append style={->, thick},
     group height=0.3,
     bar height=0.5,
-    ]{1}{8}
-    \gantttitle{2027}{4}
-    \gantttitle{2028}{4} \\
-    \gantttitle{Q1}{1}
-    \gantttitle{Q2}{1}
-    \gantttitle{Q3}{1}
-    \gantttitle{Q4}{1}
-    \gantttitle{Q5}{1}
-    \gantttitle{Q6}{1}
-    \gantttitle{Q7}{1}
-    \gantttitle{Q8}{1} \\
+    ]{1}{16}
+    \gantttitle{2027}{8}
+    \gantttitle{2028}{8} \\
+    \gantttitle{Q1}{2}
+    \gantttitle{Q2}{2}
+    \gantttitle{Q3}{2}
+    \gantttitle{Q4}{2}
+    \gantttitle{Q5}{2}
+    \gantttitle{Q6}{2}
+    \gantttitle{Q7}{2}
+    \gantttitle{Q8}{2} \\
 
     % O1: blue
     \ganttset{group/.append style={fill=blue!30}, bar/.append style={fill=blue!60}}
-    \ganttgroup[name=g1]{O1: Establish the capability}{1}{2} \\
-    \ganttbar[name=o1a]{O1a: Instrument preparation and installation}{1}{1} \\
-    \ganttbar[name=o1b]{O1b: Recommissioning and validation}{2}{2} \\
+    \ganttgroup[name=g1]{O1: Establish the capability}{1}{4} \\
+    \ganttbar[name=o1a]{(a) Instrument preparation and installation}{1}{2} \\
+    \ganttbar[name=o1b]{(b) Recommissioning and validation}{3}{4} \\
 
     % O2: teal
     \ganttset{group/.append style={fill=teal!30}, bar/.append style={fill=teal!60}}
-    \ganttgroup[name=g2]{O2: Enable sustained access}{1}{8} \\
-    \ganttbar[name=o2a]{O2a: Operational and reduction procedures}{1}{2} \\
-    \ganttbar[name=o2b]{O2b: Gemini South and community support}{3}{8} \\
-    \ganttbar[name=o2c]{O2a: Procedure review and refinement}{3}{8} \\
-    \ganttmilestone[name=o2d]{O2b: Return IQUEYE to Asiago}{8} \\
+    \ganttgroup[name=g2]{O2: Enable sustained access}{1}{16} \\
+    \ganttbar[name=o2a]{(a) Operational and reduction procedures}{1}{4} \\
+    \ganttbar[name=o2b]{(b) Gemini South and community support}{5}{16} \\
+    \ganttbar[name=o2c]{(a) Procedure review and refinement}{5}{16} \\
+    \ganttmilestone[name=o2d]{(b) Return IQUEYE to Asiago}{16} \\
 
     % O3: orange
     \ganttset{group/.append style={fill=orange!30}, bar/.append style={fill=orange!60}}
-    \ganttgroup[name=g3]{O3: Deliver scientific results}{1}{8} \\
-    \ganttbar[name=o3a1]{O3a: Proposal preparation and submission}{1}{1}
-    \ganttbar[name=o3a2]{}{3}{3}
-    \ganttbar[name=o3a3]{}{5}{5}
-    \ganttbar[name=o3a4]{}{7}{7} \\
-    \ganttbar[name=o3b]{O3b: IQUEYE observing campaigns}{3}{8} \\
-    \ganttbar[name=o3c]{O3b: Data reduction and scientific analysis}{3}{8} \\
-    \ganttmilestone[name=o3pub1]{O3b: Scientific publications}{4}
-    \ganttmilestone[name=o3pub2]{}{8} \\
-    \ganttbar[name=o3d]{O3c: Multiwavelength coordination}{1}{8}
+    \ganttgroup[name=g3]{O3: Deliver scientific results}{1}{16} \\
+    \ganttbar[name=o3a1]{(a) Proposal preparation and submission}{1}{2}
+    \ganttbar[name=o3a2]{}{5}{6}
+    \ganttbar[name=o3a3]{}{9}{10} \\
+    % Observing campaigns segmented by semester (mid-quarter start, end of quarter end)
+    \ganttbar[name=o3b27a]{}{2}{4}
+    \ganttbar[name=o3b27b]{2027A, 2027B, 2028A, and 2028B}{6}{8}
+    \ganttbar[name=o3b28a]{}{10}{12}
+    \ganttbar[name=o3b28b]{}{14}{16} \\
+    \ganttbar[name=o3c1]{(b) Data reduction and scientific analysis}{2}{5}
+    \ganttbar[name=o3c2]{}{6}{9}
+    \ganttbar[name=o3c3]{}{10}{13}
+    \ganttbar[name=o3c4]{}{14}{16} \\
+    \ganttmilestone[name=o3pub1]{(b) Scientific publications}{8}
+    \ganttmilestone[name=o3pub2]{}{16} \\
+    \ganttbar[name=o3d]{(c) Multiwavelength coordination}{1}{16}
 
-    \ganttlink[link/.append style={blue!70!black}]{o1a}{o1b}
-    \ganttlink[link/.append style={blue!70!black}]{o1b}{o2b}
-    \ganttlink[link/.append style={teal!70!black}]{o2a}{o2b}
-    \ganttlink[link/.append style={teal!70!black}]{o2a}{o2c}
-    \ganttlink[link/.append style={blue!70!black}]{o1b}{o3b}
-    \ganttlink[link/.append style={orange!70!black}]{o3a1}{o3b}
   \end{ganttchart}
 \end{figure}
-
-
 
 \subsubsection{Indicate where the project activities will be executed}
 % max 1/2 page
@@ -326,9 +325,6 @@ The project will establish IQUEYE as a resident visitor instrument at Gemini Sou
 Project activities will be executed at Universidad de Chile, Departamento de Ingeniería Eléctrica, assembling needed components for the first deployment on Q1 and Q2, as well as activites related to scientific analyses. Deployment of components, preparation for instrument commission, and the initial observing runs will be performed on site at Gemini South summit and base facilities (Cerro Pachón and city of La Serena, Coquimbo Region).
 
 Trips to summit will be coordinated with Gemini South using their transportation from La Serena to Cerro Pachón, and will always be scheduled over daytime. Night observations will only be performed at the control room in La Serena, remote operations only. Once our team has achieved a good level of accessing tools and infraestructure needed to perform observations (including troubleshooting routines) we will schedule observations remotely from Universidad de Chile in collaboration with our partners at Università di Padova, Italy.
-
-
-
 
 \setcounter{subsection}{3}
 \subsection{Management and budget description}
